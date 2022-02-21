@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+
+    <div>
+        <h1>Simple Plot switcher</h1>
+    </div>
+    <div>
+        <h2>Flask + Jinja2 + JS</h2>
+    </div>
+    <div>
+        <!-- Show first plot by default -->
+        <img id="plot" src="/plots/{{ plots[0].filename }}" alt="{{ plots[0].name }}">
+    </div>
+
+    <!-- Add one button for each plot -->
+    <!-- Configure JavaScript for each button to -->
+    <!-- pass the url to the img tag when clicked -->
+    {% for plot in plots %}
+    <button 
+        type="button" 
+        class="btn btn-primary"
+        onclick="document.getElementById('plot').src='/plots/{{ plot.filename }}';"
+        >
+            Plot - {{plot.name }}
+    </button>
+    {% endfor %}
+
+</div>
+{% endblock content %}
