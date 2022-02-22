@@ -1,6 +1,6 @@
 # Simple Plot switcher
 
-Simple app created with Flask+Jinja2+JS to show how to use buttons to switch plots.
+Simple app created with Flask+Jinja2+JS to show how to use buttons to switch between matplotlib plots.
 
 # TODOs
 
